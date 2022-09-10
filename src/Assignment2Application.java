@@ -8,9 +8,9 @@ public class Assignment2Application {
 		int userInput = 0;
 			
 		Scanner scanner = new Scanner(System.in);
-		int example = generateRandom();
 		for(int i = 0; i < 5; i++) {
 			
+			int example = generateRandom();
 			userInput = Integer.parseInt(scanner.nextLine());
 			
 			checkMyNumber(userInput, example);
@@ -18,11 +18,14 @@ public class Assignment2Application {
 				i--;
 			}
 			
+			if(i == 4 && userInput != example) {
+				System.out.println("You lose! The Number to guess was " + example);
+			}
+			
 		}
 		
 		
 		
-		System.out.println(example);
 		
 
 		scanner.close();
