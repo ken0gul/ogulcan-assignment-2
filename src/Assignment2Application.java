@@ -42,7 +42,10 @@ public class Assignment2Application {
 		} else if (input > example) {
 			System.out.println("Your number is: " + input + " he number you guessed is: " + example);
 			System.out.println("Pick a lower number");
+			
 		return input;
+		} else if(input == example) {
+			System.out.println("You WIN!");
 		}
 		return input;
 		
