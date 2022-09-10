@@ -11,10 +11,12 @@ public class Assignment2Application {
 		int example = generateRandom();
 		for(int i = 0; i < 5; i++) {
 			
-			
 			userInput = Integer.parseInt(scanner.nextLine());
 			
 			checkMyNumber(userInput, example);
+			if(userInput < 1 || userInput > 100) {
+				i--;
+			}
 			
 		}
 		
@@ -31,11 +33,12 @@ public class Assignment2Application {
    
 	private static int checkMyNumber(int input, int example) {
 		
-			
+//			
 		if(input < 1 || input > 100) {
 			System.out.println("Your Guess is not in between 0 and 100. Try again.");
-			
-		} else if( input < example) {
+		}	
+//			
+		else if( input < example) {
 			System.out.println("Your number is: " + input + " The number you guessed is: " + example);
 			System.out.println("Pick a higher number");
 			return input;
