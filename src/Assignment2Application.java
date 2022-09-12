@@ -6,11 +6,11 @@ public class Assignment2Application {
 
 	public static void main(String[] args) {
 		int userInput = 0;
+		int example = generateRandom();
 			
 		Scanner scanner = new Scanner(System.in);
 		for(int i = 0; i < 5; i++) {
 			
-			int example = generateRandom();
 			userInput = Integer.parseInt(scanner.nextLine());
 			
 			checkMyNumber(userInput, example);
@@ -39,15 +39,14 @@ public class Assignment2Application {
 //			
 		if(input < 1 || input > 100) {
 			System.out.println("Your Guess is not in between 0 and 100. Try again.");
+			
 		}	
 //			
 		else if( input < example) {
-			System.out.println("Your number is: " + input + " The number you guessed is: " + example);
-			System.out.println("Pick a higher number");
+			System.out.println("Your number is: " + input + " Pick a higher number");
 			return input;
 		} else if (input > example) {
-			System.out.println("Your number is: " + input + " he number you guessed is: " + example);
-			System.out.println("Pick a lower number");
+			System.out.println("Your number is: " + input + " Pick a lower number");
 			
 		return input;
 		} else if(input == example) {
