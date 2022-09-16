@@ -18,7 +18,7 @@ public class Assignment2Application {
 			
 			userInput = Integer.parseInt(scanner.nextLine());
 			
-			checkMyNumber(userInput, example, isGameOver);
+			checkMyNumber(userInput, example);
 			if(userInput < 1 || userInput > 100) {
 				i--;
 			}
@@ -47,28 +47,23 @@ public class Assignment2Application {
 	}
 	
    
-	private static int checkMyNumber(int input, int example, boolean isGameOver) {
+	private static int checkMyNumber(int input, int example) {
 		
 //			
 		if(input < 1 || input > 100) {
 			System.out.println("Your Guess is not in between 0 and 100. Try again.");
-			System.out.println(example);
 			return input;
 		}	
 //			
 		else if( input < example) {
 			System.out.println("Your number is: " + input + " Pick a higher number");
-			System.out.println(example);
 			return input;
 		} else if (input > example) {
 			System.out.println("Your number is: " + input + " Pick a lower number");
-			System.out.println(example);
 			
 		return input;
 		} else if(input == example) {
 			System.out.println("You WIN!");
-			isGameOver = true;
-			System.out.println(example);
 			return input;
 			
 			
